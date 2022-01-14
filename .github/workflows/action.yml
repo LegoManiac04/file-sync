@@ -11,7 +11,8 @@ jobs:
       - name: save current date
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
-          mv actions-test-source/test/* https://github.com/LegoManiac04/actions-test/tree/main/test
+          git clone https://github.com/LegoManiac04/actions-test.git
+          mv actions-test-source/test/* actions-test/test/
 
       - name: setup git config
         run: |
