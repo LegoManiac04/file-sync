@@ -42,8 +42,8 @@ jobs:
         run: |
           mv actions-test-source/test/* actions-test/test/
           cd actions-test
-          git status
           git add test/
+          git status
           git commit -m "sync"
           git push origin master
           
