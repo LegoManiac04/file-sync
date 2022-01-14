@@ -12,7 +12,7 @@ jobs:
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
           cd
-          sudo mv actions-test-source/test* /test
+          sudo mv actions-test-source/test/* /test
 
       - name: setup git config
         run: |
