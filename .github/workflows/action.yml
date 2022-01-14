@@ -24,5 +24,6 @@ jobs:
         run: |
           # Stage the file, commit and push
           git add actions-test/test
+          git status
           git commit -m "Refresh"
           git push origin master
