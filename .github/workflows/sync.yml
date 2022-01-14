@@ -45,5 +45,5 @@ jobs:
           git add test/
           git status
           git commit -m "sync"
-          git push origin master
+          git push origin main
           
