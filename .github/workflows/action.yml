@@ -22,6 +22,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add /test
+          git add /home/runner/work/actions-test/actions-test/test
           git commit -m "Refresh"
           git push origin master
