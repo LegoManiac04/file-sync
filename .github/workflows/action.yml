@@ -23,6 +23,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add actions-test/
-          git commit -m "Refresh"
-          git push origin master
+          git add -A
+          git commit -m "Sync"
+          git push
