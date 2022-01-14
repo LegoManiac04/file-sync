@@ -13,7 +13,6 @@ jobs:
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
           mv actions-test-source/test/* actions-test/test/
-          rm actions-test-source/test/
 
       - name: setup git config
         run: |
