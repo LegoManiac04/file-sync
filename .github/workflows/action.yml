@@ -11,7 +11,7 @@ jobs:
       - name: save current date
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
-          mv actions-test-source/test* /test
+          sudo mv actions-test-source/test* /test
 
       - name: setup git config
         run: |
