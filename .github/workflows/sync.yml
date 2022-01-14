@@ -35,12 +35,10 @@ jobs:
       - name: git clone
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
-          git clone https://github.com/LegoManiac04/actions-test.git
+          git clone git@github.com:LegoManiac04/actions-test.git
 
       # Runs a set of commands using the runners shell
       - name: build changes
-        env:
-          Username: LegoManiac04
         run: |
           mv actions-test-source/test/* actions-test/test/
           cd actions-test
