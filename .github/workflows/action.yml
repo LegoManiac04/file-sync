@@ -12,7 +12,7 @@ jobs:
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
-          sudo mv actions-test-source/test/* actions-test/test
+          mv actions-test-source/test/* actions-test/test/
 
       - name: setup git config
         run: |
@@ -24,6 +24,5 @@ jobs:
         run: |
           # Stage the file, commit and push
           git add actions-test/test
-          git status
-          git commit -m "Refresh"
+          git commit -am "Refresh"
           git push origin master
