@@ -11,7 +11,7 @@ jobs:
       - name: save current date
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
-          cd actions-test
+          cd
           sudo mv actions-test-source/test* /test
 
       - name: setup git config
@@ -23,6 +23,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add /home/runner/work/actions-test/actions-test/test/
+          git add /test
           git commit -m "Refresh"
           git push origin master
