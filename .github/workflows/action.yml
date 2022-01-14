@@ -25,4 +25,4 @@ jobs:
           # Stage the file, commit and push
           git add -A
           git commit -m "Sync"
-          git push origin master
+          git push origin main
