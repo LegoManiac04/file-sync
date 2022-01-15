@@ -1,4 +1,4 @@
-name: Sync API
+name: File Sync
 on:
   schedule:
     - cron '20 4 * * *'
@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Get API from main repo
+      - name: Get files from main repo
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
@@ -22,13 +22,13 @@ jobs:
       - name: Setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-          git config user.name "Sync Bot"
+          git config user.name "file-sync [bot]"
           git config user.email "<>"
 
-      - name: commit
+      - name: Commit
         run: |
           # Stage the file, commit and push
           git add .
-          git diff-index --quiet HEAD || git commit -m "Sync"
+          git diff-index --quiet HEAD || git commit -m "Updated Files"
           git push
 
