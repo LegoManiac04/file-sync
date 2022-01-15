@@ -1,32 +1,32 @@
-name: Commit date to master
+name: Sync API
 on: push
 jobs:
   date:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the branch
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: save current date
+      - name: Get API from main repo
         run: |
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
           cp actions-test-source/test/* actions-test/test
-          sudo rm -R actions-test-source
           sudo mv -f actions-test/test/* ./test
+          sudo rm -R actions-test-source
+          sudo rm -R actions-test
 
 
-      - name: setup git config
+      - name: Setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-          git config user.name "GitHub Actions Bot"
+          git config user.name "Sync Bot"
           git config user.email "<>"
 
       - name: commit
         run: |
           # Stage the file, commit and push
           git add .
-          git diff-index --quiet HEAD || git commit -m "[skip ci] Save result of action"
+          git diff-index --quiet HEAD || git commit -m "Sync"
           git push
 
