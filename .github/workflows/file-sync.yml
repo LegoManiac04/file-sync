@@ -2,6 +2,7 @@ name: File Sync
 on:
   schedule:
     - cron '20 4 * * *'
+  push:
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -11,12 +12,12 @@ jobs:
 
       - name: Get files from main repo
         run: |
-          git clone https://github.com/LegoManiac04/actions-test-source.git
-          git clone https://github.com/LegoManiac04/actions-test.git
+          git clone https://github.com/LegoManiac04/file-sync-source.git
+          git clone https://github.com/LegoManiac04/file-sync.git
           cp actions-test-source/test/* actions-test/test
-          sudo mv -f actions-test/test/* ./test
-          sudo rm -R actions-test-source
-          sudo rm -R actions-test
+          sudo mv -f file-sync/test/* ./test
+          sudo rm -R file-sync-source
+          sudo rm -R file-sync
 
 
       - name: Setup git config
