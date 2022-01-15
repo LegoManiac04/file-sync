@@ -14,7 +14,7 @@ jobs:
           git clone https://github.com/LegoManiac04/actions-test.git
           cp actions-test-source/test/* actions-test/test
           sudo rm -R actions-test-source
-          sudo mv -f actions-test/test/* .
+          sudo mv -f actions-test/test/* ./test
 
 
       - name: setup git config
