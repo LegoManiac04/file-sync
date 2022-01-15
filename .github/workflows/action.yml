@@ -15,6 +15,7 @@ jobs:
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
           cp actions-test-source/test/* actions-test/test
+          sudo rm -R actions-test-source actions-test
 
       - name: setup git config
         run: |
@@ -25,7 +26,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          cd actions-test/
-          git add /test
+          git add -A
           git commit -m "Sync"
           git push origin main
