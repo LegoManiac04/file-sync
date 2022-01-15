@@ -26,6 +26,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add -A
-          git commit -m "Sync"
-          git push origin main
+          git add .
+          git diff-index --quiet HEAD || git commit -m "[skip ci] Save result of action"
+          git push
