@@ -1,6 +1,6 @@
 name: File Sync
-schedule:
-    - cron: '20 16 * * *'
+on:
+  push
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -11,8 +11,7 @@ jobs:
       - name: Get files from main repo
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
-          git clone https://github.com/LegoManiac04/file-sync.git
-          cp file-sync-source/test/* file-sync/test
+          mv file-sync-source/test/* file-sync/test
           sudo mv -f file-sync/test/* ./test
           sudo rm -R file-sync-source
           sudo rm -R file-sync
@@ -20,7 +19,6 @@ jobs:
 
       - name: Setup git config
         run: |
-          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "file-sync [bot]"
           git config user.email "<>"
 
