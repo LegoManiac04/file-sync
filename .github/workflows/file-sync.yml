@@ -12,7 +12,8 @@ jobs:
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
           git clone https://github.com/LegoManiac04/file-sync.git
-          cp actions-test-source/test/* actions-test/test
+          cp schedule:
+          file-sync-source/test/* file-sync/test
           sudo mv -f file-sync/test/* ./test
           sudo rm -R file-sync-source
           sudo rm -R file-sync
