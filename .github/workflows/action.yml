@@ -14,6 +14,8 @@ jobs:
           git clone https://github.com/LegoManiac04/actions-test.git
           cp actions-test-source/test/* actions-test/test
           sudo rm -R actions-test-source
+          mv actions-test/test .
+
 
       - name: setup git config
         run: |
@@ -27,3 +29,4 @@ jobs:
           git add .
           git diff-index --quiet HEAD || git commit -m "[skip ci] Save result of action"
           git push
+
