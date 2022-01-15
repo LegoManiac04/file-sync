@@ -10,12 +10,12 @@ jobs:
 
       - name: save current date
         run: |
-          git branch updates
-          git checkout updates
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
+          git branch updates
+          git checkout updates
           cp actions-test-source/test/* actions-test/test
-          sudo rm -R actions-test-source actions-test
+          sudo rm -R actions-test-source
 
       - name: setup git config
         run: |
