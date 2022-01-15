@@ -25,6 +25,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add -A
+          git add /test
           git commit -m "Sync"
           git push origin main
