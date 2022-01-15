@@ -1,6 +1,6 @@
 name: File Sync
-on:
-  push
+schedule:
+    - cron '20 16 * * *'
 jobs:
   sync:
     runs-on: ubuntu-latest
