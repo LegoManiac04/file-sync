@@ -1,7 +1,9 @@
 name: Sync API
-on: push
+on:
+  schedule:
+    - cron '20 4 * * *'
 jobs:
-  date:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
