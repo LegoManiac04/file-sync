@@ -13,7 +13,6 @@ jobs:
           git clone https://github.com/LegoManiac04/file-sync-source.git
           mv file-sync-source/test/* ./test
           sudo rm -R file-sync-source
-          sudo rm -R file-sync
 
 
       - name: Setup git config
