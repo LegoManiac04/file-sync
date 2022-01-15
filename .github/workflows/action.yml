@@ -10,6 +10,8 @@ jobs:
 
       - name: save current date
         run: |
+          git branch updates
+          git checkout
           git clone https://github.com/LegoManiac04/actions-test-source.git
           git clone https://github.com/LegoManiac04/actions-test.git
           cp actions-test-source/test/* actions-test/test
