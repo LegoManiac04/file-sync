@@ -11,8 +11,7 @@ jobs:
       - name: Get files from main repo
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
-          mv file-sync-source/test/* file-sync/test
-          sudo mv -f file-sync/test/* ./test
+          mv file-sync-source/test/* ./test
           sudo rm -R file-sync-source
           sudo rm -R file-sync
 
