@@ -1,7 +1,7 @@
 name: File Sync
 on:
   schedule:
-    - cron: '10 17 * * *'
+    - cron: '50 15 * * *'
 
 jobs:
   sync:
