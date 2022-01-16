@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Get files from main repo
+      - name: Get files from other repo
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
           mv file-sync-source/test/* ./test
