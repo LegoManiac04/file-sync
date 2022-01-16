@@ -1,7 +1,8 @@
 name: File Sync
 on:
   schedule:
-    - cron: '20 16 * * *'
+    - cron: '33 16 * * *'
+
 jobs:
   sync:
     runs-on: ubuntu-latest
