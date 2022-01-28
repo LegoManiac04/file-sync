@@ -15,7 +15,7 @@ jobs:
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
           mv file-sync-source/test/folder/* ./test/folder
-          rm file-sync-source/test/folder/
+          rm -R file-sync-source/test/folder
           mv file-sync-source/test/* ./test
           rm -R file-sync-source
 
