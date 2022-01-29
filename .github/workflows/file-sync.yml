@@ -14,9 +14,9 @@ jobs:
       - name: Get files from other repo
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
-          mv file-sync-source/test/folder/* ./test/folder
+          mv -u file-sync-source/test/folder/* ./test/folder
           rm -R file-sync-source/test/folder
-          mv file-sync-source/test/* ./test
+          mv -u file-sync-source/test/* ./test
           rm -R file-sync-source
 
 
