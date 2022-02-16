@@ -1,7 +1,7 @@
 name: File Sync
 on:
   repository_dispatch:
-    types: [event_type]
+    types: [file_sync]
 
 jobs:
   sync:
@@ -13,6 +13,7 @@ jobs:
       - name: Get files from other repo
         run: |
           git clone https://github.com/LegoManiac04/file-sync-source.git
+          rm -R ./test/folder/
           mv file-sync-source/test/folder/* ./test/folder
           rm -R file-sync-source/test/folder
           mv file-sync-source/test/* ./test
@@ -28,6 +29,6 @@ jobs:
         run: |
           # Stage the file, commit and push
           git add .
-          git diff-index --quiet HEAD || git commit -m "Updated Files"
+          git diff-index --quiet HEAD || git commit -m "Synced Files"
           git push
 
