@@ -1,8 +1,7 @@
 name: File Sync
 on:
-  schedule:
-    - cron: '50 15 * * *'
-  workflow_dispatch:
+  repository_dispatch:
+    types: [event_type]
 
 jobs:
   sync:
